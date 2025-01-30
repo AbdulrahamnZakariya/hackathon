@@ -228,3 +228,91 @@ h1, h2 {
     text-align: center;
     margin-bottom: 20px;
 }
+.main-title {
+    background-image: url('images/e.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px 0;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease; /* إضافة انتقال سلس للتأثيرات */
+}
+
+.main-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    border-radius: 10px;
+    transition: all 0.3s ease; /* إضافة انتقال سلس للتأثيرات */
+}
+
+.main-title:hover {
+    transform: scale(1.05); /* تكبير العنوان قليلاً */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); /* إضافة ظل */
+}
+
+.main-title:hover::before {
+    background: rgba(0, 0, 0, 0.7); /* تغيير لون الطبقة الشبه شفافة */
+}
+/* 🔹 تصميم معرض الصور في الأقسام */
+.section-image {
+    display: block;
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(30px);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.section-image:hover {
+    transform: scale(1.05);
+}
+/* 🔹 تصميم شعار SkillLensAi */
+.logo-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.team-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-card:hover {
+    transform: scale(1.05);
+}

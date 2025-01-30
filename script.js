@@ -18,4 +18,13 @@ document.querySelectorAll('nav a').forEach(anchor => {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(".section-image");
+    images.forEach((img, index) => {
+        setTimeout(() => {
+            img.style.opacity = "1";
+            img.style.transform = "translateY(0)";
+        }, index * 200); // تأخير بسيط لكل صورة لجعل الحركة متسلسلة
+    });
+});
 
